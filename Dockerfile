@@ -12,7 +12,7 @@ RUN npm install express --save
 RUN npm install body-parser
 RUN npm install mysql
 RUN useradd -ms /bin/bash user
-COPY app.js /home/user/myapp.js
+COPY myapp.js /home/user/myapp.js
 COPY start.sh /home/user/start.sh
 RUN chmod a+x /home/user/start.sh
 USER user
