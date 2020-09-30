@@ -1,5 +1,5 @@
 # Bank data API-nodejs
 
-docker run -d -p 3000:3000 huiling97/bank-data
+docker run -d -p 8000:8000 huiling97/bank-data
 
-curl -i http://localhost:3000/user
+curl -i http://localhost:8000/user
