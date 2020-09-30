@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 MAINTAINER huiling_loh_97@hotmail.com
-EXPOSE 3000
+EXPOSE 8000
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Singapore
 
