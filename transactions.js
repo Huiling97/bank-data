@@ -55,7 +55,7 @@ router.put("/user_transaction", (req, res) => {
 });
 
 //delete data from transaction table
-router.delete("/user_transaction", (req, res) => {
+router.delete("/user_transaction/id", (req, res) => {
     mysqlConnection.query(
         `delete from transactions where id = ${req.body.id}`, (err, results) => {
             if (err) {

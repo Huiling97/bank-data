@@ -17,7 +17,7 @@ router.get("/user_message", (req, res) => {
 });
 
 //get: to retrieve based on id
-router.get("/user_message", (req, res) => {
+router.get("/user_message/id", (req, res) => {
     mysqlConnection.query(`select * from secured_messages where id = ('${req.body.id}')`, (err, results) => {
         if (err) {
             res.send("Error occured");
@@ -51,7 +51,7 @@ router.post("/user_message", (req, res) => {
 //put: to update
 router.put("/user_message", (req, res) => {
     mysqlConnection.query(
-        `insert into secured_messages first_name = '${req.body.first_name}', remarks = '${req.body.remarks}' where id = ${req.body.id}`,
+        `update secured_messages set first_name = '${req.body.first_name}', remarks = '${req.body.remarks}' where id = ${req.body.id}`,
         (err, results) => {
             if (err) {
                 res.send("Error occured");
@@ -67,7 +67,7 @@ router.put("/user_message", (req, res) => {
 });
 
 //delete
-router.delete("/user_message", (req, res) => {
+router.delete("/user_message/id", (req, res) => {
     mysqlConnection.query(
         `delete from secured_messages where id = ${req.body.id}`, (err, results) => {
             if (err) {

@@ -22,8 +22,6 @@ router.get("/user/gender", (req, res) => {
         if (err) {
             console.log(err);
             res.send("Error occured");
-        } if (err = []) {
-            res.send("Error occured");
         } else {
             res.send(results);
         }});
